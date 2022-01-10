@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div>{{name}}</div>
+        
+        <!-- 会替换掉节点中内容 -->
+        <div v-text="name">sss</div>
+        
+        <!-- 会替换掉节点中内容 容易被xss攻击 -->
+        <div v-html="str"></div>
+        
+        <!-- 网页解析后Vue会删除v-cloak -->
+        <div v-cloak>{{name}}</div>
+
+        <!-- v-once：初次渲染后视为静态资源 -->
+        <h2 v-once>初始值为：{{n}}</h2>
+        <h2>当前值为：{{n}}</h2>
+        <button @click="n++">n+1</button>
+
+        <!-- v-pre：跳过所在节点的编译过程 -->
+        <h2 v-pre>初始值为：{{n}}</h2>
+        <h2>当前值为：{{n}}</h2>
+        <button @click="n++">n+1</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    new Vue({
+        el: "#root",
+        data() {
+            return {
+                name: 'RhysNi',
+                str: '<h3>RhysNi!</h3>',
+                n:1,
+            }
+        },
+    })
+</script>
+
+</html>

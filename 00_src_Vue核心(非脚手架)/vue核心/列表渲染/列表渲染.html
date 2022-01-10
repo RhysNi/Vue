@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+        <!-- 遍历数组 -->
+        <ul>
+            <li v-for="(person,index) in personList" :key="index">
+                {{person.name}}-{{person.age}}
+            </li>
+        </ul>
+
+
+        <!-- 遍历对象 -->
+        <ul>
+            <li v-for="(val,key) in car" :key="key">
+                {{key}}-{{val}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;//阻止 vue 在启动时生成生产提示。
+    new Vue({
+        el: '#root', //用于执行当前Vue实例为那个容器服务
+        data: {
+            personList: [
+                { "id": 0, "name": '张三', "age": 17 },
+                { "id": 1, "name": '李四', "age": 12 },
+                { "id": 2, "name": '王五', "age": 54 }
+            ],
+            car: {
+                name: '大众',
+                price: 78
+            }
+        }
+    });
+</script>
+
+</html>

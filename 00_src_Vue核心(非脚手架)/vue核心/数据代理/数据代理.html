@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+    let num = 25;
+    let person = {
+        name: 'RhysNi',
+        sex: '男',
+        // age:24
+    }
+
+    Object.defineProperty(person, 'age', {
+        // value:num,
+        // enumerable:true,//控制属性是否可以枚举
+        // writable:true,//控制属性是否可以被修改
+        // configurable:true,//控制属性是否可以被删除
+        get() {
+            return num;
+        },
+        set(value) {
+            num = value;
+        }
+    });
+
+    console.log(person)
+</script>
+
+</html>

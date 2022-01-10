@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../js/dayjs.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        计算属性：<h1>{{fmtDate}}</h1>
+        函数：<h1>{{getTime()}}</h1>
+        过滤器：<h1>{{time | timeFmter}}</h1>
+        过滤器：<h1>{{time | timeFmter('YYYY-MM-DD') | myslice}}</h1>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    //全局过滤器
+    Vue.filter('myslice', function (val) {
+        return val.slice(0, 4);
+    })
+    new Vue({
+        el: "#root",
+        data() {
+            return {
+                time: Date.now()
+            }
+        },
+        computed: {
+            fmtDate() {
+                return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss');
+            }
+        },
+        methods: {
+            getTime() {
+                return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss');
+            }
+        },
+        //局部过滤器
+        filters: {
+            timeFmter(val, fmt = 'YYYY-MM-DD HH:mm:ss') {
+                return dayjs(val).format(fmt);
+            },
+            // myslice(val){
+            //     return val.slice(0,4);
+            // },
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>初始vue</title>
+	<script type="text/javascript" src="../../../js/vue.js"></script>
+</head>
+
+<body>
+	<div id="root">
+		<School></School>
+		<hr>
+		<Student></Student>
+		<hr>
+		<Hello></Hello>
+		<!-- 脚手架中使用 -->
+		<Hello />
+	</div>
+</body>
+
+<script type="text/javascript">
+	Vue.config.productionTip = false;
+
+	//可省略Vue.extend()
+	const school = {
+		template: `
+				<div>
+					<h2>学校名称：{{sName}}</h2>
+					<h2>地址：{{sAddress}}</h2>
+				</div>
+			`,
+		data() {
+			return {
+				sName: '南京工业大学',
+				sAddress: '南京浦口校区',
+			}
+		}
+	};
+
+	const student = Vue.extend({
+		template: `
+				<div>
+					<h2>名称：{{name}}</h2>
+					<h2>年龄：{{age}}</h2>	
+				</div>
+			`,
+		data() {
+			return {
+				name: 'rhys',
+				age: 25,
+			}
+		}
+	});
+
+	const hello = Vue.extend({
+		template: `
+				<div>
+					<h2>{{msg}}</h2>
+				</div>
+			`,
+		data() {
+			return {
+				msg: 'Hi Rhys'
+			}
+		},
+	});
+
+	//全局注册
+	Vue.component('Hello', hello);
+
+	new Vue({
+		el: '#root',
+		//局部注册
+		components: {
+			School: school,
+			Student: student
+		}
+	});
+</script>
+
+</html>

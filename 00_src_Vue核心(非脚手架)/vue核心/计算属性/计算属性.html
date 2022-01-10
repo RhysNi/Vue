@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" v-model="firstName"> <br /><br />
+        <input type="text" v-model="lastName"> <br /><br />
+        <span>全名：{{fullName}}</span></span>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    const vm = new Vue({
+        el: '#root',
+        data() {
+            return {
+                firstName: 'Rhys',
+                lastName: 'Ni',
+            };
+        },
+        computed: {
+            // fullName:{
+            //     get(){
+            //         return this.firstName + '-' + this.lastName;
+            //     },
+            //     set(value){
+            //         let arr = value.split('-');
+            //         this.firstName = arr[0];
+            //         this.lastName = arr[1];
+            //     }
+            // },
+
+            //只读取不修改时可简写
+            fullName() {
+                return this.firstName + '-' + this.lastName;
+            }
+        },
+    });
+</script>
+
+</html>

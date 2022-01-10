@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>hello {{name}}</h1>
+        <!-- 回车 -->
+        <input type="text" placeholder="按下回车提示" @keyup.enter="showInfo">
+        <!-- 退格和删除 -->
+        <input type="text" placeholder="按下退格和删除提示" @keyup.delete="showInfo">
+        <!-- 退出 -->
+        <input type="text" placeholder="按下退出提示" @keyup.esc="showInfo">
+        <!-- 空格 -->
+        <input type="text" placeholder="按下空格提示" @keyup.space="showInfo">
+        <!-- 制表 -->
+        <input type="text" placeholder="按下制表提示" @keydown.tab="showInfo">
+        <!-- 上下左右 -->
+        <input type="text" placeholder="按上提示" @keyup.up="showInfo">
+        <input type="text" placeholder="按下提示" @keyup.down="showInfo">
+        <input type="text" placeholder="按左提示" @keyup.left="showInfo">
+        <input type="text" placeholder="按右提示" @keyup.right="showInfo">
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    const vm = new Vue({
+        el: '#root',
+        data() {
+            return {
+                name: 'RhysNi',
+            };
+        },
+        methods: {
+            showInfo(e) {
+                console.log(e.target.value);
+            },
+        },
+    });
+</script>
+
+</html>

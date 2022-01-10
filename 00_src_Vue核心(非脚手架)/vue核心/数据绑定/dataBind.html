@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始vue</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        单项数据绑定：<input type="text" :value="name" />
+        双项数据绑定：<input type="text" v-model="name" />
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;//阻止 vue 在启动时生成生产提示。
+    new Vue({
+        el: '#root', //用于执行当前Vue实例为那个容器服务
+        data: {
+            name: 'rhys'
+        }
+    });
+</script>
+
+</html>

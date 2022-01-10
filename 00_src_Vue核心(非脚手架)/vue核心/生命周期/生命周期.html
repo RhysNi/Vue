@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2 :style="{opacity}">RhysNi</h2>
+        <button @click="stop">点击关闭</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    new Vue({
+        el: "#root",
+        data() {
+            return {
+                opacity: 1
+            }
+        },methods: {
+            stop(){
+                this.$destroy()
+            }
+        },
+        //生命周期钩子
+        //Vue完成模板解释并把初始的真实D莫元素放入页面后（挂在完毕）调用mounted 
+        mounted() {
+            setInterval(() => {
+                this.opacity -= 0.01
+                if (this.opacity <= 0) {
+                    this.opacity = 1
+                }
+            }, 16)
+        },
+        //常用
+        beforeDestroy() {
+            clearInterval();
+            console.log('beforeDestroy');
+        },
+    })
+
+    //外部定时器实现，不推荐
+    // setInterval((params) => {
+    //     vm.opacity -= 0.01
+    //     if (vm.opacity <= 0) {
+    //         vm.opacity = 1
+    //     }
+    // }, 16)
+</script>
+
+</html>
