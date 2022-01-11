@@ -136,7 +136,7 @@
 Object.defineProperty
 ```
 
-![image-20220102013641539](/Users/rhys/Library/Application Support/typora-user-images/image-20220102013641539.png)
+<img width="1147" alt="image-20220102013641539" src="https://user-images.githubusercontent.com/58049956/149004392-33ea5fa6-6721-41b2-a7fe-db3e644ac8e4.png">
 
 ```html
 <!DOCTYPE html>
@@ -951,7 +951,7 @@ Object.defineProperty
 
 ### 组件嵌套
 
-![image-20220104005315643](/Users/rhys/Library/Application Support/typora-user-images/image-20220104005315643.png)
+<img width="915" alt="image-20220104005315643" src="https://user-images.githubusercontent.com/58049956/149004530-beb2a4bf-0293-4981-8283-0968e8681809.png">
 
 ```html
 <!DOCTYPE html>
@@ -1073,22 +1073,18 @@ Object.defineProperty
 1、切换到项目所在目录
 	cd /xxx/xxx
 2、创建项目
-	vue create vueDemo![image-20220104025052490](/Users/rhys/Library/Application Support/typora-user-images/image-20220104025052490.png)
+	vue create vueDemo
 ```
 
-![image-20220104025114942](/Users/rhys/Library/Application Support/typora-user-images/image-20220104025114942.png)
-
-![image-20220104024912403](/Users/rhys/Library/Application Support/typora-user-images/image-20220104024912403.png)
-
-![image-20220104025022599](/Users/rhys/Library/Application Support/typora-user-images/image-20220104025022599.png)
-
-![image-20220104025240430](/Users/rhys/Library/Application Support/typora-user-images/image-20220104025240430.png)
+![image-20220104025114942](https://user-images.githubusercontent.com/58049956/149004724-dd28ed75-0320-48e4-84a3-4dea77f0690d.png)
+![image-20220104024912403](https://user-images.githubusercontent.com/58049956/149004741-a95b251f-46fa-484a-96df-3fcca5012a34.png)
+![image-20220104025022599](https://user-images.githubusercontent.com/58049956/149004758-bbd501f4-5ed8-4fd6-a0e8-0584583d6b93.png)
+![image-20220104025240430](https://user-images.githubusercontent.com/58049956/149004796-4378b89d-50ca-4def-b643-20725a923a1a.png)
 
 ```shell
 #打开地址http://localhost:8080/ 看到如下页面时，脚手架安装完成
 ```
-
-![image-20220104025416045](/Users/rhys/Library/Application Support/typora-user-images/image-20220104025416045.png)
+<img width="935" alt="image-20220104025416045" src="https://user-images.githubusercontent.com/58049956/149004829-b6a4b7c1-21d5-4e5d-ad4c-d29b8b7495c8.png">
 
 ### ref属性
 
@@ -1561,7 +1557,7 @@ export default {
 
 - 任意组件间通信
 - 用完解绑
-- ![image-20220108130207894](/Users/rhys/Library/Application Support/typora-user-images/image-20220108130207894.png)
+<img width="703" alt="image-20220108130207894" src="https://user-images.githubusercontent.com/58049956/149004897-8fc9d206-6d48-4d80-9af4-ad525d6ec6e6.png">
 
 ```javascript
 <!--main,js-->
@@ -1695,7 +1691,7 @@ export default {
 
 ### 消息订阅与发布
 
- ![image-20220108165146489](/Users/rhys/Library/Application Support/typora-user-images/image-20220108165146489.png)
+<img width="386" alt="image-20220108165146489" src="https://user-images.githubusercontent.com/58049956/149004937-39266872-64de-46c0-8cc9-9313f11f1c82.png">
 
 #### 引入第三方消息订阅库
 
@@ -2381,15 +2377,14 @@ export default {
 
 ##### 全局事件总线实现多组件数据共享
 
-![image-20220109153045096](/Users/rhys/Library/Application Support/typora-user-images/image-20220109153045096.png)
+<img width="660" alt="image-20220109153045096" src="https://user-images.githubusercontent.com/58049956/149004984-818d92cc-c20a-4959-890f-2d23d0a832f7.png">
 
 ##### vuex实现多组件数据共享
 
-![image-20220109153509046](/Users/rhys/Library/Application Support/typora-user-images/image-20220109153509046.png)
+<img width="673" alt="image-20220109153509046" src="https://user-images.githubusercontent.com/58049956/149005005-cd189ad6-cad7-4548-b196-aea47b22c362.png">
 
 ##### vuex原理
-
-![image-20220109155911420](/Users/rhys/Library/Application Support/typora-user-images/image-20220109155911420.png)
+<img width="580" alt="image-20220109155911420" src="https://user-images.githubusercontent.com/58049956/149005023-d591d422-fb62-4e90-9fd1-46f8e7a4e4cc.png">
 
 ###### 安装 
 
@@ -2759,7 +2754,7 @@ export default new Vuex.Store({
 
 ### 路由
 
-![image-20220111004017703](/Users/rhys/Library/Application Support/typora-user-images/image-20220111004017703.png)
+<img width="793" alt="image-20220111004017703" src="https://user-images.githubusercontent.com/58049956/149005073-230e3620-8291-4925-aeba-5845225638f8.png">
 
 #### 路由的理解
 
@@ -2791,8 +2786,7 @@ export default new Vuex.Store({
 ###### 基本路由
 
 - 目录机构
-
-  <img src="/Users/rhys/Library/Application Support/typora-user-images/image-20220111013549163.png" alt="image-20220111013549163" style="zoom:200%;" />
+![image-20220111013549163](https://user-images.githubusercontent.com/58049956/149005190-7540fdb9-4ed5-4acc-aacd-84de16cb8395.png)
 
 - About.vue
 
@@ -2927,7 +2921,7 @@ export default new VueRouter({
 
 - 目录机构
 
-  <img src="/Users/rhys/Library/Application Support/typora-user-images/image-20220111015702786.png" alt="image-20220111015702786" style="zoom:200%;" />
+![image-20220111015702786](https://user-images.githubusercontent.com/58049956/149005350-c6a12073-88e4-4ca3-bdbe-85bbf474203b.png)
 
 - About.vue
 
@@ -3720,12 +3714,10 @@ npm run build
 ```
 
 ### 打包成功
-
-<img src="/Users/rhys/Library/Application Support/typora-user-images/image-20220112012709556.png" alt="image-20220112012709556" style="zoom: 200%;" />
+![image-20220112012709556](https://user-images.githubusercontent.com/58049956/149005401-e3833084-a1e5-41ee-ba69-5fb347caba72.png)
 
 ### 打包后文件夹
-
-<img src="/Users/rhys/Library/Application Support/typora-user-images/image-20220112012842113.png" alt="image-20220112012842113" style="zoom:200%;" />
+![image-20220112012842113](https://user-images.githubusercontent.com/58049956/149005440-1d895e5c-233f-433a-99c2-29d2a9a1373e.png)
 
 ### Node.js搭建微型服务器
 
