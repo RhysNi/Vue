@@ -25,7 +25,8 @@ export default new VueRouter({
                     children: [
                         {
                             name: 'detail',
-                            path: 'detail/:id/:title',
+                            // path: 'detail/:id/:title',
+                            path: 'detail',
                             component: Detail,
                             // props第一种写法，值为对象，该对象中的所有key-value都会以props的形式传给Detail组件
                             // props:{a:1,b:'RhysNi'}
