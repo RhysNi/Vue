@@ -1,4 +1,3 @@
-# vue_demo
 # 目录中有配套笔记（Vue2.X笔记）- RhysNi
 
 ## Project setup
